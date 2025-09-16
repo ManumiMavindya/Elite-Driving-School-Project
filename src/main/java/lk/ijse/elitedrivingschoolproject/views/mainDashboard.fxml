@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="adminMainAnchorPane" prefHeight="614.0" prefWidth="820.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox layoutX="103.0" layoutY="61.0" prefHeight="96.0" prefWidth="614.0" spacing="50.0">
+         <children>
+            <Pane prefHeight="124.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Text layoutX="141.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Students" wrappingWidth="116.53668212890625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="totalStudentCounttxt" layoutX="173.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" wrappingWidth="38.9366455078125">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="23.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/icons8-student-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="124.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Text layoutX="141.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Instructors" wrappingWidth="116.53668212890625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="totalInstructorsCounttxt" layoutX="180.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" wrappingWidth="38.9366455078125">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8-teacher-50%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="103.0" layoutY="189.0" prefHeight="96.0" prefWidth="614.0" spacing="50.0">
+         <children>
+            <Pane prefHeight="124.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Text layoutX="141.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Vehicles" wrappingWidth="116.53668212890625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="totalVehiclesCounttxt" layoutX="174.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" wrappingWidth="38.9366455078125">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="22.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/icons8-vehicle-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="124.0" prefWidth="309.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Text layoutX="141.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Today Classes" wrappingWidth="116.53668212890625">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="todayClassestxt" layoutX="180.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" wrappingWidth="38.9366455078125">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="57.0" fitWidth="66.0" layoutX="25.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/icons8-informatics-50.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <BarChart fx:id="barChart" layoutX="103.0" layoutY="326.0" prefHeight="224.0" prefWidth="614.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>
