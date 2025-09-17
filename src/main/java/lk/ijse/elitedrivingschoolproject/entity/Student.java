@@ -1,9 +1,13 @@
 package lk.ijse.elitedrivingschoolproject.entity;
 
-
 import jakarta.persistence.*;
-
+import lombok.*;
 import java.time.LocalDate;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 
 @Entity
 @Table(name = "student")
