@@ -12,14 +12,13 @@ import java.time.LocalDate;
 @ToString
 public class StudentDTO {
 
-    private int studentId;
+    private String studentId;
     private String studentFullName;
     private LocalDate studentBirthDate;
     private String studentGender;
     private String studentPhone;
     private String studentAddress;
     private String studentEmail;
-    private String studentNationalId;
-    // select course
+    private LocalDate registrationDate;
 
 }
