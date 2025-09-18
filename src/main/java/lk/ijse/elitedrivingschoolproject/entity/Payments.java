@@ -20,7 +20,7 @@ public class Payments {
 
     @ManyToOne
     @JoinColumn
-    private Students student_Name;
+    private Students student_id;
 
     @ManyToOne
     @JoinColumn

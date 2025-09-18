@@ -40,6 +40,8 @@ public class Students {
     @Column(nullable = false, unique = true)
     private LocalDate registration_date;
 
+    //add course
+
     @OneToMany(
             mappedBy = "students",
             cascade = CascadeType.ALL
@@ -52,7 +54,7 @@ public class Students {
     )
     private List<Payments> payments;
 
-    @ManyToMany(
+    @OneToMany(
             mappedBy = "students",
             cascade = CascadeType.ALL
     )
