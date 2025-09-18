@@ -16,7 +16,6 @@ import java.util.List;
 public class Instructors {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private String instructor_id;
 

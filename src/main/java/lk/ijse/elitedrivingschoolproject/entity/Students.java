@@ -16,7 +16,6 @@ public class Students {
 
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String student_id;
 
     @Column(nullable = false)
@@ -37,7 +36,7 @@ public class Students {
     @Column(nullable = false, unique = true)
     private String student_email;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private LocalDate registration_date;
 
     //add course

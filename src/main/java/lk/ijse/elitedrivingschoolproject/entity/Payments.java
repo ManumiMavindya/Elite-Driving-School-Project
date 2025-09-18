@@ -15,7 +15,6 @@ public class Payments {
 
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String transaction_Id;
 
     @ManyToOne

@@ -17,7 +17,6 @@ import lombok.*;
 public class Lessons {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private String lesson_id;
 
