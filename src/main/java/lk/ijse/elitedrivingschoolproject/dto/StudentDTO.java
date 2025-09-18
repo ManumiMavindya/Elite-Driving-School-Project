@@ -20,5 +20,5 @@ public class StudentDTO {
     private String studentAddress;
     private String studentEmail;
     private LocalDate registrationDate;
-
+ // course
 }
