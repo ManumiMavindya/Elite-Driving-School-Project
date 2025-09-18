@@ -1,4 +1,35 @@
 package lk.ijse.elitedrivingschoolproject.entity;
 
+import jakarta.persistence.*;
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+
+@Entity
+@Table(name ="course")
 public class Course {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
+    private String course_id;
+
+    @Column(nullable = false)
+    private String course_name;
+
+    @Column(nullable = false)
+    private String course_duration;
+
+    @Column(nullable = false)
+    private String course_fee;
+
+    @Column(nullable = false)
+    private String course_description;
+
+    @Column(nullable = false)
+    private String course_instructor_id;
+
 }

@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @ToString
 
 public class InstructorDTO {
-    private int instructorId;
+    private String instructorId;
     private String instructorFullName;
     private LocalDate instructorBirthDate;
     private String instructorPhone;
