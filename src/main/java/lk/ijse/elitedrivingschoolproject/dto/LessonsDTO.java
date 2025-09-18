@@ -2,7 +2,13 @@ package lk.ijse.elitedrivingschoolproject.dto;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import lombok.*;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 
 public class LessonsDTO {
 

@@ -3,6 +3,8 @@ package lk.ijse.elitedrivingschoolproject.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -29,7 +31,27 @@ public class Course {
     @Column(nullable = false)
     private String course_description;
 
-    @Column(nullable = false)
-    private String course_instructor_id;
+    @OneToMany(
+            mappedBy = "course",
+            cascade = CascadeType.ALL
+    )
+    private List<Lessons> lessons;
 
+    @OneToMany(
+            mappedBy = "course",
+            cascade = CascadeType.ALL
+    )
+    private List<StudentCourseDetails> studentCourseDetails;
+
+    @OneToMany(
+            mappedBy = "course",
+            cascade = CascadeType.ALL
+    )
+    private List<Instructors> instructors;
+
+    @OneToMany(
+            mappedBy = "course",
+            cascade = CascadeType.ALL
+    )
+    private List<Payments> payments;
 }

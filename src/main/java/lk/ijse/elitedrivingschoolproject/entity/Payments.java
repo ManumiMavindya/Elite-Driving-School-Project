@@ -11,18 +11,20 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "payment")
-public class Payment {
+public class Payments {
 
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String transaction_Id;
 
-    @Column(nullable = false)
-    private String student_Name;
+    @ManyToOne
+    @JoinColumn
+    private Students student_Name;
 
-    @Column(nullable = false)
-    private String course_Name;
+    @ManyToOne
+    @JoinColumn
+    private Course course_Id;
 
     @Column(nullable = false)
     private LocalDate payment_Date;

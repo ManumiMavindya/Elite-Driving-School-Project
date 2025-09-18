@@ -3,6 +3,7 @@ package lk.ijse.elitedrivingschoolproject.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -10,8 +11,8 @@ import java.time.LocalDate;
 @Setter
 
 @Entity
-@Table(name = "student")
-public class Student {
+@Table(name = "students")
+public class Students {
 
     @Id
     @Column
@@ -38,4 +39,23 @@ public class Student {
 
     @Column(nullable = false, unique = true)
     private LocalDate registration_date;
+
+    @OneToMany(
+            mappedBy = "students",
+            cascade = CascadeType.ALL
+    )
+    private List<Lessons> lessons;
+
+    @OneToMany(
+            mappedBy = "students",
+            cascade = CascadeType.ALL
+    )
+    private List<Payments> payments;
+
+    @ManyToMany(
+            mappedBy = "students",
+            cascade = CascadeType.ALL
+    )
+    private List<StudentCourseDetails> studentCourseDetails;
+
 }

@@ -18,7 +18,7 @@ public class InstructorDTO {
     private String instructorAddress;
     private String instructorEmail;
     private String instructorLicenceNumber;
-    private String courseName;
+    private String courseId;
     private String status;
 
 }

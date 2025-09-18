@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,8 +12,8 @@ import java.time.LocalDate;
 @Setter
 
 @Entity
-@Table(name = "instructor")
-public class Instructor {
+@Table(name = "instructors")
+public class Instructors {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,10 +38,17 @@ public class Instructor {
     @Column(nullable = false,unique = true)
     private String licence_number;
 
-    @Column(nullable = false)
-    private String course_name;
+    @ManyToOne
+    @JoinColumn
+    private Course course_id;
 
     @Column(nullable = false,unique = true)
     private String status;
+
+    @OneToMany(
+            mappedBy = "instructors",
+            cascade = CascadeType.ALL
+    )
+    private List<Lessons> lessons;
 
 }
