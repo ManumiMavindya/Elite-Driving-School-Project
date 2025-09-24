@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="614.0" prefWidth="1160.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.InstructorsPageController">
    <children>
       <Text fill="#2f3033" layoutX="23.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instructor Management">
@@ -21,7 +20,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <TableView fx:id="Instructortbl" layoutX="23.0" layoutY="132.0" prefHeight="451.0" prefWidth="1113.0" style="-fx-background-radius: 10;">
+      <TableView fx:id="Instructortbl" layoutX="23.0" layoutY="132.0" onMouseClicked="#onClickedTable" prefHeight="451.0" prefWidth="1113.0" style="-fx-background-radius: 10;">
          <columns>
             <TableColumn fx:id="colInstructorId" prefWidth="64.79998397827148" text="ID" />
             <TableColumn fx:id="colInstructorFullName" prefWidth="160.80007934570312" text="Full Name" />

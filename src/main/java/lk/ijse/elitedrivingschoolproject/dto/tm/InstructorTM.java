@@ -1,8 +1,16 @@
 package lk.ijse.elitedrivingschoolproject.dto.tm;
 
-import javafx.scene.control.Button;
+
 
 import java.time.LocalDate;
+
+import javafx.scene.layout.Pane;
+import lombok.*;
+
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 
 public class InstructorTM {
     private String instructorId;
@@ -14,6 +22,5 @@ public class InstructorTM {
     private String instructorLicenceNumber;
     private String courseId;
     private String status;
-    private Button updateButton;
-    private Button deleteButton;
+    private Pane action;
 }
