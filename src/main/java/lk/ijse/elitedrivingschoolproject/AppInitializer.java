@@ -14,11 +14,12 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("views/loginPage.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
+        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/views/mainDashboard.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setScene(scene);
-        primaryStage.setTitle("ELITE DRIVING SCHOOL PROJECT");
+        primaryStage.setTitle("ELITE DRIVING SCHOOL");
         primaryStage.show();
-        primaryStage.setMaximized(true);
+        //primaryStage.setMaximized(true);
+
     }
 }

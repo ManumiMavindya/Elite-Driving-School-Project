@@ -1,17 +1,10 @@
-package lk.ijse.elitedrivingschoolproject.dto;
+package lk.ijse.elitedrivingschoolproject.dto.tm;
 
-import lombok.*;
+import javafx.scene.control.Button;
 
 import java.time.LocalDate;
 
-
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
-public class StudentDTO {
-
+public class StudentTM {
     private String studentId;
     private String studentFullName;
     private LocalDate studentBirthDate;
@@ -20,6 +13,6 @@ public class StudentDTO {
     private String studentAddress;
     private String studentEmail;
     private LocalDate registrationDate;
-
- // course
+    private Button updateButton;
+    private Button deleteButton;
 }

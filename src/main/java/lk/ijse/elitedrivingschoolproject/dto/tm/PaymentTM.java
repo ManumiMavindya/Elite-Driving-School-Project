@@ -1,20 +1,16 @@
-package lk.ijse.elitedrivingschoolproject.dto;
+package lk.ijse.elitedrivingschoolproject.dto.tm;
 
-import lombok.*;
+import javafx.scene.control.Button;
 
 import java.time.LocalDate;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@ToString
-
-public class PaymentDTO {
+public class PaymentTM {
     private String transactionId;
     private String studentId;
     private String courseId;
     private LocalDate paymentDate;
     private int paymentAmount;
     private String paymentStatus;
+    private Button updateButton;
+    private Button deleteButton;
 }
