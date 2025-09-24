@@ -182,6 +182,34 @@ public class EntityDTOConverter {
         return students;
     }
 
-    // user
+    //user
+
+    public UserDTO getUserDTO(User user) {
+        if (user == null) {
+            return null;
+        }
+        UserDTO dto = new UserDTO();
+        dto.setUserId(user.getUser_id());
+        dto.setUsername(user.getUser_name());
+        dto.setAge(Integer.parseInt(user.getAge()));
+        dto.setEmail(user.getEmail());
+        dto.setPassword(user.getPassword());
+        dto.setContactNumber(user.getContactNumber());
+        dto.setAction(user.getAction());
+        return dto;
+    }
+
+    public User getUserEntity(UserDTO dto) {
+        User user = new User();
+
+        user.setUser_id(dto.getUserId());
+        user.setUser_name(dto.getUsername());
+        user.setAge(String.valueOf(dto.getAge()));
+        user.setEmail(dto.getEmail());
+        user.setPassword(dto.getPassword());
+        user.setContactNumber(dto.getContactNumber());
+        user.setAction(dto.getAction());
+        return user;
+    }
 
 }

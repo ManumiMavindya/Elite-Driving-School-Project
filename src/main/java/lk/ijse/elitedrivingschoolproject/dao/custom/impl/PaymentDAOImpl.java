@@ -120,11 +120,11 @@ public class PaymentDAOImpl implements PaymentDAO {
     }
 
     @Override
-    public Optional<Payments> findById(String id) throws Exception .{
+    public Optional<Payments> findById(String id) throws Exception{
 
         Session session = factoryConfiguration.getSession();
         try {
-            Payments payments = session.get(Payments.class,id);
+            Payments payments = session.get(Payments.class, id);
             return Optional.ofNullable(payments);
         }finally {
             session.close();

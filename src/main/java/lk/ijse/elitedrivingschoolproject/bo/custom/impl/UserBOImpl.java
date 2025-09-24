@@ -16,7 +16,7 @@ import java.util.Optional;
 
 public class UserBOImpl implements UserBO {
 
-    private final UserDAO userDAO = DAOFactory.getInstance().getUserDAO(DAOTypes.USER);
+    private final UserDAO userDAO = DAOFactory.getInstance().getDAO(DAOTypes.USER);
     private final EntityDTOConverter entityDTOConverter = new EntityDTOConverter();
 
 

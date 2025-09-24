@@ -77,9 +77,9 @@ public class LessonsBOImpl implements LessonsBO {
 
         int studentEnrolled = queryDAO.getStudentCountForLesson(id);
         if (studentEnrolled > 0) {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION),
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
             "Are you sure you want to delete?",
-                    ButtonType.YES, ButtonType.NO );
+                    ButtonType.YES, ButtonType.NO);
 
             ButtonType result = alert.showAndWait().orElse(ButtonType.NO);
             if (result != ButtonType.YES) {

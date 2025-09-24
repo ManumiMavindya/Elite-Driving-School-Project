@@ -71,7 +71,7 @@ public class StudentCourseDetailBOImpl implements StudentCourseDetailBO {
     @Override
     public boolean deleteStudentCourseDetails(String id) throws Exception {
 
-        Optional<StudentCourseDetails>  studentCourseDetailsExists = studentCourseDetailDAO.findById(id);
+        Optional<StudentCourseDetails>  studentCourseDetailsExists = studentCourseDetailsDAO.findById(id);
         if (studentCourseDetailsExists.isEmpty()) {
             throw new Exception("Student Course not found");
         }
