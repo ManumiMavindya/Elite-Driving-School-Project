@@ -32,7 +32,7 @@ public class InstructorDAOImpl implements InstructorDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Query<Instructors> query = session.createQuery("SELECT i.instructor_id FROM Instructors i ORDER BY i.instructor_id DESC", Instructors.class)
+            Query<String> query = session.createQuery("SELECT i.instructor_id FROM Instructors i ORDER BY i.instructor_id DESC", String.class)
                     .setMaxResults(1);
             List<String> instructorList = query.list();
             if(instructorList.isEmpty()){
