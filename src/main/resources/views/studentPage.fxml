@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="614.0" prefWidth="1160.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.StudentPageController">
+   <children>
+      <Text layoutX="23.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Management">
+         <font>
+            <Font name="Bookman Old Style Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button fx:id="addStudentbtn" layoutX="23.0" layoutY="77.0" mnemonicParsing="false" onAction="#addStudentbtnOnAction" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #2ed573;" text="+ Add Student" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <TableView fx:id="studenttbl" layoutX="23.0" layoutY="132.0" prefHeight="451.0" prefWidth="1113.0" style="-fx-background-radius: 10;">
+        <columns>
+          <TableColumn fx:id="colStudentId" prefWidth="59.99999809265137" text="ID" />
+          <TableColumn fx:id="colStudentFullName" prefWidth="157.60000610351562" text="Full Name" />
+            <TableColumn fx:id="colStudentBirth" prefWidth="85.59999084472656" text="Date Of Birth" />
+            <TableColumn fx:id="colStudentGender" prefWidth="81.60003662109375" text="Gender" />
+            <TableColumn fx:id="colStudentPhoneNumber" prefWidth="104.0" text="Phone Number" />
+            <TableColumn fx:id="colStudentAddress" prefWidth="112.0" text="Address" />
+            <TableColumn fx:id="colStudentEmailAddress" prefWidth="114.39996337890625" text="Email Address" />
+            <TableColumn fx:id="colStudentNationalID" prefWidth="127.199951171875" text="National ID" />
+            <TableColumn fx:id="colStudentCourses" prefWidth="159.20001220703125" text="Courses" />
+            <TableColumn fx:id="colStudentAction" prefWidth="108.79995117187491" text="Action" />
+        </columns>
+      </TableView>
+      <TextField fx:id="seachStudenttxt" layoutX="826.0" layoutY="77.0" prefHeight="38.0" prefWidth="310.0" promptText="Search here..(EX-ID,Name)" style="-fx-background-color: #dfe4ea; -fx-background-radius: 10;" />
+   </children>
+</AnchorPane>
