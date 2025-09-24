@@ -112,7 +112,7 @@ public class InstructorsPageController implements Initializable {
     private void loadAllInstructors() throws Exception {
 
         try {
-            Instructortbl.getItems(FXCollections.observableArrayList(
+            Instructortbl.setItems(FXCollections.observableArrayList(
                     instructorBO.getAllInstructors().stream().map(instructorDTO -> {
 
                         Pane action = new Pane();
@@ -173,7 +173,7 @@ public class InstructorsPageController implements Initializable {
         }
     }
 
-    public void deleteOnAction(String id) throws Exception {
+    public void deleteOnAction(String id) {
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,
                 "Are you sure?",
@@ -194,7 +194,8 @@ public class InstructorsPageController implements Initializable {
                     new Alert(Alert.AlertType.ERROR,"Instructor could not be deleted!!").show();
                 }
             }catch (Exception e){
-                throw new RuntimeException(e);
+                e.printStackTrace();
+                new Alert(Alert.AlertType.ERROR, "Error while deleting instructor: " + e.getMessage()).show();
             }
         }
     }

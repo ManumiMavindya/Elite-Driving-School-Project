@@ -104,7 +104,6 @@ public class EntityDTOConverter {
         dto.setPaymentDate(payments.getPayment_Date());
         dto.setPaymentAmount(payments.getPayment_Amount());
         dto.setPaymentStatus(payments.getPayment_status());
-        dto.setAction(payments.getPayment_action());
         return dto;
     }
 
@@ -121,7 +120,6 @@ public class EntityDTOConverter {
         payments.setPayment_Date(dto.getPaymentDate());
         payments.setPayment_Amount(dto.getPaymentAmount());
         payments.setPayment_status(dto.getPaymentStatus());
-        payments.setPayment_action(dto.getAction());
         return payments;
 
     }
@@ -195,7 +193,6 @@ public class EntityDTOConverter {
         dto.setEmail(user.getEmail());
         dto.setPassword(user.getPassword());
         dto.setContactNumber(user.getContactNumber());
-        dto.setAction(user.getAction());
         return dto;
     }
 
@@ -208,7 +205,6 @@ public class EntityDTOConverter {
         user.setEmail(dto.getEmail());
         user.setPassword(dto.getPassword());
         user.setContactNumber(dto.getContactNumber());
-        user.setAction(dto.getAction());
         return user;
     }
 
