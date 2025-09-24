@@ -36,7 +36,7 @@ public class PaymentDAOImpl implements PaymentDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Query<String> query = session.createQuery("SELECT l.transaction_Id FROM Payments l ORDER BY l.transaction_Id DESC",String.class)
+            Query<String> query = session.createQuery("SELECT p.transaction_Id FROM Payments p ORDER BY p.transaction_Id DESC",String.class)
                     .setMaxResults(1);
             List<String> paymentsList = query.list();
             if (paymentsList.isEmpty()) {
@@ -112,7 +112,7 @@ public class PaymentDAOImpl implements PaymentDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Query<String> query = session.createQuery("SELECT i.transaction_Id FROM Payments i", String.class);
+            Query<String> query = session.createQuery("SELECT p.transaction_Id FROM Payments p", String.class);
             return query.list();
         }finally {
             session.close();
@@ -124,7 +124,7 @@ public class PaymentDAOImpl implements PaymentDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Payments payments = session.get(Payments.class, id);
+            Payments payments = session.get(Payments.class,id);
             return Optional.ofNullable(payments);
         }finally {
             session.close();

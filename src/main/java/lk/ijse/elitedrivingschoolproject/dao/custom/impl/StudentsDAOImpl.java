@@ -33,7 +33,7 @@ public class StudentsDAOImpl implements StudentDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Query<String> query = session.createQuery("SELECT i.student_id FROM Students i ORDER BY i.student_id DESC", String.class)
+            Query<String> query = session.createQuery("SELECT st.student_id FROM Students st ORDER BY st.student_id DESC", String.class)
                     .setMaxResults(1);
             List<String> studentList = query.list();
             if(studentList.isEmpty()){
@@ -108,7 +108,7 @@ public class StudentsDAOImpl implements StudentDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Query<String> query = session.createQuery("SELECT i.student_id FROM Students i", String.class);
+            Query<String> query = session.createQuery("SELECT st.student_id FROM Students st", String.class);
             return query.list();
         }finally {
             session.close();
