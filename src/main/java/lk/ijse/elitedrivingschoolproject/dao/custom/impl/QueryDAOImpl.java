@@ -23,4 +23,5 @@ public class QueryDAOImpl implements QueryDAO {
             session.close();
         }
     }
+
 }
