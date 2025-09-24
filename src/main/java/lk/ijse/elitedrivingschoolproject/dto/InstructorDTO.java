@@ -9,6 +9,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
+@Builder
+@Data
 
 public class InstructorDTO {
     private String instructorId;

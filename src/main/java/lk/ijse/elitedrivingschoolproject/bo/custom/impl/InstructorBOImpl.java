@@ -79,4 +79,9 @@ public class InstructorBOImpl implements InstructorBO {
         return Optional.empty();
     }
 
+    public String generateNewInstructorID() throws Exception {
+        return instructorDAO.generateNewId();
+    }
+
+
 }

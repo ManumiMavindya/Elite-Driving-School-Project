@@ -18,7 +18,6 @@ import lk.ijse.elitedrivingschoolproject.bo.custom.InstructorBO;
 import lk.ijse.elitedrivingschoolproject.dto.InstructorDTO;
 import lk.ijse.elitedrivingschoolproject.dto.tm.InstructorTM;
 
-import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.Optional;
@@ -27,7 +26,7 @@ import java.util.ResourceBundle;
 public class InstructorsPageController implements Initializable {
 
     @FXML
-    private TableView<?> Instructortbl;
+    private TableView<InstructorTM> Instructortbl;
 
     @FXML
     private Button addInstructorbtn;
