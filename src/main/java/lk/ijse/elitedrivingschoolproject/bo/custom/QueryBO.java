@@ -1,4 +1,6 @@
 package lk.ijse.elitedrivingschoolproject.bo.custom;
 
-public interface QueryBO {
+import lk.ijse.elitedrivingschoolproject.bo.SuperBO;
+
+public interface QueryBO extends SuperBO {
 }

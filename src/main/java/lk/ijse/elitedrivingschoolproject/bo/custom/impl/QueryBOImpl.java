@@ -1,4 +1,6 @@
 package lk.ijse.elitedrivingschoolproject.bo.custom.impl;
 
-public class QueryBOImpl {
+import lk.ijse.elitedrivingschoolproject.bo.custom.QueryBO;
+
+public class QueryBOImpl implements QueryBO {
 }
