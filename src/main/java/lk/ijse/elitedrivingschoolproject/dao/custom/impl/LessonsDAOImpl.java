@@ -33,7 +33,7 @@ public class LessonsDAOImpl implements LessonsDAO {
 
         Session session = factoryConfiguration.getSession();
         try {
-            Query<Lessons> query = session.createQuery("SELECT l.lesson_id FROM Lessons l ORDER BY l.lesson_id DESC",Lessons.class)
+            Query<String> query = session.createQuery("SELECT l.lesson_id FROM Lessons l ORDER BY l.lesson_id DESC",String.class)
                     .setMaxResults(1);
             List<String> lessons = query.list();
             if (lessons.isEmpty()) {
