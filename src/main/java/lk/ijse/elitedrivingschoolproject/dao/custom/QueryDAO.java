@@ -1,4 +1,8 @@
 package lk.ijse.elitedrivingschoolproject.dao.custom;
 
-public interface QueryDAO {
+import lk.ijse.elitedrivingschoolproject.dao.SuperDAO;
+
+public interface QueryDAO extends SuperDAO {
+
+    public int getStudentCountForLesson(String lessonId);
 }

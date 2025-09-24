@@ -9,6 +9,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
+@ToString
 
 @Entity
 @Table(name = "students")
@@ -41,22 +42,37 @@ public class Students {
 
     //add course
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "student_course",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "course_id")
+
+    )
+    @ToString.Exclude
+    private List<Course> courses;
+
+    //
     @OneToMany(
             mappedBy = "students",
             cascade = CascadeType.ALL
     )
+    @ToString.Exclude
     private List<Lessons> lessons;
 
     @OneToMany(
             mappedBy = "students",
             cascade = CascadeType.ALL
     )
+    @ToString.Exclude
     private List<Payments> payments;
 
     @OneToMany(
             mappedBy = "students",
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER
     )
+    @ToString.Exclude
     private List<StudentCourseDetails> studentCourseDetails;
 
 }
