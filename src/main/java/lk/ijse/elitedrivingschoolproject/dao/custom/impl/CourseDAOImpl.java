@@ -32,7 +32,7 @@ public class CourseDAOImpl implements CourseDAO {
 
         Session session = factoryConfiguration.getSession();
         try{
-            Query<String> query = session.createQuery("SELECT c.course_id FROM Course c ORDER BY c.course_id DESC", String.class);
+            Query<String> query = session.createQuery("SELECT c.course_id FROM Course c ORDER BY c.course_id DESC", String.class)
                      .setMaxResults(1);
             List<String> courseIds = query.list();
             if(courseIds.isEmpty()){
@@ -143,4 +143,5 @@ public class CourseDAOImpl implements CourseDAO {
             return String.format("C%03d", num);
         }
     }
+
 }
