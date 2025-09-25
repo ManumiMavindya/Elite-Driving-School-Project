@@ -1,6 +1,13 @@
 package lk.ijse.elitedrivingschoolproject.dto.tm;
 
-import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 
 public class CourseTM {
     private String courseId;
@@ -8,7 +15,5 @@ public class CourseTM {
     private String duration;
     private double fee;
     private String description;
-    private Button saveButton;
-    private Button deleteButton;
-    private Button updateButton;
+    private Pane action;
 }

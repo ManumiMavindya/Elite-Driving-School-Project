@@ -20,7 +20,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <TableView fx:id="coursetbl" layoutX="23.0" layoutY="130.0" prefHeight="419.0" prefWidth="1102.0" style="-fx-background-radius: 10;">
+      <TableView fx:id="coursetbl" layoutX="23.0" layoutY="130.0" onMouseClicked="#onClickTable" prefHeight="419.0" prefWidth="1102.0" style="-fx-background-radius: 10;">
         <columns>
           <TableColumn fx:id="colCourseId" prefWidth="118.40002059936523" text="Course ID" />
           <TableColumn fx:id="colCourseName" prefWidth="271.99998474121094" text="Course Name" />

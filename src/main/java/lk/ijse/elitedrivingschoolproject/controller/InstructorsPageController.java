@@ -92,7 +92,7 @@ public class InstructorsPageController implements Initializable {
     void addInstructorbtnOnAction(ActionEvent event) {
 
         try {
-            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("/views/AddInstructor.fxml"));
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("/views/addInstructorForm.fxml"));
             Parent parent = fxmlLoader.load();
 
             Stage stage = new Stage();
