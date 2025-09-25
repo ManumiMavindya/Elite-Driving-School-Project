@@ -50,6 +50,9 @@ public class UserPageController implements Initializable {
     private TableColumn<UserTM, String> colUserPassword;
 
     @FXML
+    private TableColumn<UserTM, String> colRole;
+
+    @FXML
     private TextField searchUsertxt;
 
     @FXML
@@ -68,8 +71,6 @@ public class UserPageController implements Initializable {
             Stage stage = new Stage();
             stage.setTitle("Add User");
             stage.setScene(new Scene(parent));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setResizable(false); // Optional: prevent resizing
             stage.showAndWait();
 
             loadAllUsers();
@@ -90,6 +91,7 @@ public class UserPageController implements Initializable {
         colUserEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
         colUserPassword.setCellValueFactory(new PropertyValueFactory<>("password"));
         colUserContactNumber.setCellValueFactory(new PropertyValueFactory<>("contactNumber"));
+        colRole.setCellValueFactory(new PropertyValueFactory<>("role"));
         colUserAction.setCellValueFactory(new PropertyValueFactory<>("action"));
 
         try {
@@ -130,6 +132,7 @@ public class UserPageController implements Initializable {
                                 userDTO.getEmail(),
                                 userDTO.getPassword(),
                                 userDTO.getContactNumber(),
+                                userDTO.getRole(),
                                 action
                         );
                     }).toList()
