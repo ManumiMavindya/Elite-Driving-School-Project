@@ -1,8 +1,13 @@
 package lk.ijse.elitedrivingschoolproject.dto.tm;
 
-import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 
 public class UserTM {
 
@@ -12,7 +17,6 @@ public class UserTM {
     private String email;
     private String password;
     private String contactNumber;
-    private Button updateButton;
-    private Button deleteButton;
+    private Pane action;
 
 }
