@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
+import lk.ijse.elitedrivingschoolproject.dto.Role;
 import lk.ijse.elitedrivingschoolproject.util.AuthUtil;
 
 import java.net.URL;
@@ -132,14 +133,14 @@ public class DashboardController implements Initializable {
 
     public void restrictions() {
 
-//        if (AuthUtil.getRole().equalsIgnoreCase(String.valueOf(Role.USER))) {
-//            userbtn.setVisible(false);
-//            coursesbtn.setVisible(false);
-//            instructorsbtn.setVisible(false);
-//
-//        }
-//    }
+        if (AuthUtil.getRole().equalsIgnoreCase(String.valueOf(Role.USER))) {
+            userbtn.setVisible(false);
+            coursesbtn.setVisible(false);
+            instructorsbtn.setVisible(false);
+
+        }
+    }
 
     }
-}
+
 

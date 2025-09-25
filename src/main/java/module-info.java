@@ -5,6 +5,7 @@ module lk.ijse.elitedrivingschoolproject {
     requires jakarta.persistence;
     requires org.hibernate.orm.core;
     requires java.naming;
+    requires jbcrypt;
 
     opens lk.ijse.elitedrivingschoolproject.config to jakarta.persistence;
 //    opens lk.ijse.elitedrivingschoolproject.entity to org.hibernate.orm.core;

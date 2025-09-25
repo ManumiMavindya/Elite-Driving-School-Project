@@ -10,6 +10,7 @@ import lk.ijse.elitedrivingschoolproject.bo.BOTypes;
 import lk.ijse.elitedrivingschoolproject.bo.custom.UserBO;
 import lk.ijse.elitedrivingschoolproject.dto.UserDTO;
 import lk.ijse.elitedrivingschoolproject.dto.tm.UserTM;
+import lk.ijse.elitedrivingschoolproject.util.PasswordUtils;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -83,7 +84,7 @@ public class AddUserPageController implements Initializable {
                 return;
             }
 
-            //String encryptedPassword = PasswordUtils.hashPassword(password);
+            String encryptedPassword = PasswordUtils.hashPassword(password);
 
             boolean isSaved = userBO.saveUser(new UserDTO(
                     userId,
