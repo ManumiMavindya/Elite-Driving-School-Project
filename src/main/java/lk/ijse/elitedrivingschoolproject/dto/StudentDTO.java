@@ -3,6 +3,7 @@ package lk.ijse.elitedrivingschoolproject.dto;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 
 @NoArgsConstructor
@@ -19,7 +20,8 @@ public class StudentDTO {
     private String studentPhone;
     private String studentAddress;
     private String studentEmail;
-    private LocalDate registrationDate;
+    private String NationalId;
+    private List<CourseDTO> courses;
 
- // course
+
 }

@@ -19,7 +19,7 @@
          <font>
             <Font size="15.0" />
          </font></Button>
-      <TableView fx:id="studenttbl" layoutX="23.0" layoutY="132.0" prefHeight="451.0" prefWidth="1113.0" style="-fx-background-radius: 10;">
+      <TableView fx:id="studenttbl" layoutX="23.0" layoutY="132.0" onMouseClicked="#onClickTable" prefHeight="451.0" prefWidth="1113.0" style="-fx-background-radius: 10;">
         <columns>
           <TableColumn fx:id="colStudentId" prefWidth="59.99999809265137" text="ID" />
           <TableColumn fx:id="colStudentFullName" prefWidth="157.60000610351562" text="Full Name" />
