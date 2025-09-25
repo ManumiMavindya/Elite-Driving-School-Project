@@ -105,4 +105,9 @@ public class LessonsBOImpl implements LessonsBO {
         }
         return Optional.empty();
     }
+
+    @Override
+    public String generateNewLessonId() throws Exception {
+        return lessonsDAO.generateNewId();
+    }
 }

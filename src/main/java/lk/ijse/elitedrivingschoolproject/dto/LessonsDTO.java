@@ -7,8 +7,10 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
-@Setter
 @ToString
+@Setter
+@Builder
+@Data
 
 public class LessonsDTO {
 

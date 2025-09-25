@@ -20,4 +20,6 @@ public interface LessonsBO {
     public List<String> getAllLessonIds() throws Exception;
 
     public Optional<LessonsDTO> findByLessonId(String id) throws Exception;
+
+    String generateNewLessonId() throws Exception;
 }
