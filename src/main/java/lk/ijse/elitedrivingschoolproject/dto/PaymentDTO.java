@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
+@Builder
 
 public class PaymentDTO {
     private String transactionId;
