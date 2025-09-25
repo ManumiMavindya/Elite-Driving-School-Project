@@ -35,6 +35,9 @@ public class User {
     private String contactNumber;
 
     @Column(nullable = false)
+    private String role;
+
+    @Column(nullable = false)
     private String action;
     
 }

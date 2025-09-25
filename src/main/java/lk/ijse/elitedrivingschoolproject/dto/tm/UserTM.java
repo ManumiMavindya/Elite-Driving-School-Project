@@ -17,6 +17,7 @@ public class UserTM {
     private String email;
     private String password;
     private String contactNumber;
+    private String role;
     private Pane action;
 
 }

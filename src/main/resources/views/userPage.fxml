@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="614.0" prefWidth="1160.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.UserPageController">
    <children>
       <Text layoutX="23.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Management">
@@ -23,13 +22,14 @@
       </Button>
       <TableView fx:id="usertbl" layoutX="23.0" layoutY="132.0" prefHeight="442.0" prefWidth="1105.0" style="-fx-background-radius: 10;">
         <columns>
-          <TableColumn fx:id="colUserId" prefWidth="125.59997177124023" text="User ID" />
-          <TableColumn fx:id="colUserName" prefWidth="263.20005798339844" text="User Name" />
-            <TableColumn fx:id="colUserAge" prefWidth="84.800048828125" text="Age" />
-            <TableColumn fx:id="colUserEmail" prefWidth="168.79998779296875" text="Email" />
-            <TableColumn fx:id="colUserPassword" prefWidth="134.39999389648438" text="Password" />
-            <TableColumn fx:id="colUserContactNumber" prefWidth="152.79998779296875" text="Contact Number" />
-            <TableColumn fx:id="colUserAction" prefWidth="179.2000732421875" text="Action" />
+          <TableColumn fx:id="colUserId" prefWidth="91.99999618530273" text="User ID" />
+          <TableColumn fx:id="colUserName" prefWidth="165.6000213623047" text="User Name" />
+            <TableColumn fx:id="colUserAge" prefWidth="79.20001220703125" text="Age" />
+            <TableColumn fx:id="colUserEmail" prefWidth="142.4000244140625" text="Email" />
+            <TableColumn fx:id="colUserPassword" prefWidth="150.39999389648438" text="Password" />
+            <TableColumn fx:id="colUserContactNumber" minWidth="0.0" prefWidth="179.20001220703125" text="Contact Number" />
+            <TableColumn fx:id="colRole" prefWidth="155.99993896484375" text="Role" />
+            <TableColumn fx:id="colAction" prefWidth="140.80010986328125" text="Action" />
         </columns>
       </TableView>
       <TextField fx:id="searchUsertxt" layoutX="818.0" layoutY="77.0" prefHeight="38.0" prefWidth="310.0" promptText="Search here..(EX-ID,Name)" style="-fx-background-radius: 10; -fx-background-color: #dfe4ea;" />

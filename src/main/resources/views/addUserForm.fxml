@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,10 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="643.0" prefWidth="600.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.AddUserPageController">
+<AnchorPane prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.AddUserPageController">
    <children>
-      <Pane layoutX="20.0" layoutY="16.0" prefHeight="546.0" prefWidth="559.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+      <Pane layoutX="20.0" layoutY="16.0" prefHeight="597.0" prefWidth="559.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <children>
             <Text layoutX="25.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
                <font>
@@ -20,7 +20,7 @@
                </font>
             </Text>
             <Label fx:id="userIdlbl" layoutX="71.0" layoutY="22.0" />
-            <VBox layoutX="26.0" layoutY="66.0" prefHeight="439.0" prefWidth="507.0">
+            <VBox layoutX="26.0" layoutY="66.0" prefHeight="519.0" prefWidth="507.0">
                <children>
                   <VBox prefHeight="110.0" prefWidth="507.0">
                      <children>
@@ -29,7 +29,7 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="userNametxt" prefHeight="38.0" prefWidth="507.0" promptText="Enter User Name" style="-fx-background-color: #dfe4ea;" />
+                        <TextField fx:id="userNametxt" prefHeight="38.0" prefWidth="507.0" promptText="Enter user Name" style="-fx-background-color: #dfe4ea;" />
                      </children>
                   </VBox>
                   <VBox prefHeight="118.0" prefWidth="507.0">
@@ -39,7 +39,7 @@
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Text>
-                        <TextField fx:id="userAgetxt" prefHeight="38.0" prefWidth="507.0" promptText="Enter User Age" style="-fx-background-color: #dfe4ea;" />
+                        <TextField fx:id="userAgetxt" prefHeight="38.0" prefWidth="507.0" promptText="Enter use Age" style="-fx-background-color: #dfe4ea;" />
                      </children>
                   </VBox>
                   <VBox prefHeight="116.0" prefWidth="507.0">
@@ -72,11 +72,21 @@
                         <TextField fx:id="userContacttxt" prefHeight="38.0" prefWidth="507.0" promptText="Enter Contact Number" style="-fx-background-color: #dfe4ea;" />
                      </children>
                   </VBox>
+                  <VBox prefHeight="94.0" prefWidth="507.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Role">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="rolecmb" prefHeight="35.0" prefWidth="515.0" promptText="select Role" style="-fx-background-color: #dfe4ea;" />
+                     </children>
+                  </VBox>
                </children>
             </VBox>
          </children>
       </Pane>
-      <Button fx:id="addUserbtn" layoutX="46.0" layoutY="578.0" mnemonicParsing="false" onAction="#addUserbtnOnAction" prefHeight="38.0" prefWidth="507.0" style="-fx-background-color: #2ed573; -fx-background-radius: 10;" text="Add User" textFill="WHITE">
+      <Button fx:id="addUserbtn" layoutX="46.0" layoutY="622.0" mnemonicParsing="false" onAction="#addUserbtnOnAction" prefHeight="38.0" prefWidth="507.0" style="-fx-background-color: #2ed573; -fx-background-radius: 10;" text="Add User" textFill="WHITE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
