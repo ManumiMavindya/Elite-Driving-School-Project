@@ -11,6 +11,8 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
+@Builder
+
 public class StudentDTO {
 
     private String studentId;
