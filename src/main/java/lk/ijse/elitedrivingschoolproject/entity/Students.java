@@ -37,8 +37,8 @@ public class Students {
     @Column(nullable = false, unique = true)
     private String student_email;
 
-    @Column(nullable = false)
-    private LocalDate registration_date;
+    @Column(nullable = false, unique = true)
+    private String nationalId;
 
     //add course
 
