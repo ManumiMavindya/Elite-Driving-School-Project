@@ -3,6 +3,8 @@ package lk.ijse.elitedrivingschoolproject.bo.util;
 import lk.ijse.elitedrivingschoolproject.dto.*;
 import lk.ijse.elitedrivingschoolproject.entity.*;
 
+import java.util.stream.Collectors;
+
 public class EntityDTOConverter {
 
     public CourseDTO getCourseDTO(Course course) {
@@ -162,7 +164,12 @@ public class EntityDTOConverter {
         dto.setStudentPhone(students.getStudent_phone());
         dto.setStudentAddress(students.getStudent_address());
         dto.setStudentEmail(students.getStudent_email());
-        dto.setRegistrationDate(students.getRegistration_date());
+        dto.setNationalId(students.getNationalId());
+        dto.setCourses(
+                students.getCourses()
+                        .stream().map(this::getCourseDTO).toList()
+
+        );
         return dto;
     }
 
@@ -176,7 +183,11 @@ public class EntityDTOConverter {
         students.setStudent_phone(dto.getStudentPhone());
         students.setStudent_address(dto.getStudentAddress());
         students.setStudent_email(dto.getStudentEmail());
-        students.setRegistration_date(dto.getRegistrationDate());
+        students.setNationalId(dto.getNationalId());
+        students.setCourses(
+                dto.getCourses()
+                        .stream().map(this::getCourseEntity).toList()
+        );
         return students;
     }
 
