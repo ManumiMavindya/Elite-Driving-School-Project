@@ -9,33 +9,34 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="adminMainAnchorPane" prefHeight="566.0" prefWidth="821.0" style="-fx-background-color: #2f3542;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane prefHeight="558.0" prefWidth="918.0" style="-fx-background-color: #2f3542;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.LoginPageController">
    <children>
-      <ImageView fitHeight="566.0" fitWidth="582.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../../../resources/images/istockphoto-1582802474-612x612.jpg" />
-         </image>
-      </ImageView>
-      <Pane layoutX="424.0" layoutY="75.0" prefHeight="415.0" prefWidth="372.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+      <Pane layoutX="472.0" layoutY="59.0" prefHeight="440.0" prefWidth="402.0" style="-fx-background-color: white; -fx-background-radius: 10;">
          <children>
-            <Text fill="#2f3542" layoutX="51.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elite Driving School">
+            <Text fill="#2f3542" layoutX="66.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elite Driving School">
                <font>
                   <Font name="Bodoni MT Condensed Bold" size="41.0" />
                </font>
             </Text>
-            <TextField fx:id="userNametxt" layoutX="38.0" layoutY="129.0" prefHeight="39.0" prefWidth="297.0" promptText="Enter Username" style="-fx-background-radius: 10;" />
-            <Button fx:id="loginbtn" layoutX="37.0" layoutY="279.0" mnemonicParsing="false" onAction="#loginbtnOnAction" prefHeight="39.0" prefWidth="297.0" style="-fx-background-radius: 10; -fx-background-color: #2f3542;" text="Login" textFill="WHITE">
+            <TextField fx:id="userNametxt" layoutX="32.0" layoutY="125.0" prefHeight="42.0" prefWidth="338.0" promptText="Enter Username" style="-fx-background-radius: 10;" />
+            <TextField fx:id="passwordtxt" layoutX="32.0" layoutY="204.0" prefHeight="42.0" prefWidth="338.0" promptText="Enter Password" style="-fx-background-radius: 10;" />
+            <Button fx:id="loginbtn" layoutX="32.0" layoutY="291.0" mnemonicParsing="false" onAction="#loginbtnOnAction" prefHeight="42.0" prefWidth="338.0" style="-fx-background-color: #2f3542; -fx-background-radius: 10;" text="Login" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="16.0" />
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Button>
-            <TextField fx:id="passwordtxt" layoutX="37.0" layoutY="201.0" prefHeight="39.0" prefWidth="297.0" promptText="Enter Password" style="-fx-background-radius: 10;" />
-            <Button fx:id="forgotPasswordbtn" layoutX="123.0" layoutY="329.0" mnemonicParsing="false" onAction="#forgotPasswordbtnOnAction" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: white;" text="Forgot Password?" textAlignment="CENTER">
+            <Button fx:id="forgotPasswordbtn" layoutX="141.0" layoutY="341.0" mnemonicParsing="false" onAction="#forgotPasswordbtnOnAction" style="-fx-background-color: white;" text="Forgot Password?" textFill="#2f3542">
                <font>
                   <Font size="13.0" />
                </font>
             </Button>
          </children>
       </Pane>
+      <ImageView fitHeight="150.0" fitWidth="402.0" layoutX="43.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

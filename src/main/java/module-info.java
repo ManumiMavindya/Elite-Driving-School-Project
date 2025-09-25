@@ -12,4 +12,6 @@ module lk.ijse.elitedrivingschoolproject {
 
     opens lk.ijse.elitedrivingschoolproject to javafx.fxml;
     exports lk.ijse.elitedrivingschoolproject;
+    exports lk.ijse.elitedrivingschoolproject.controller;
+    opens lk.ijse.elitedrivingschoolproject.controller;
 }

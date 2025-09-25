@@ -8,13 +8,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="adminSecondAnchorPane" prefHeight="678.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.AdminDashboardController">
+<AnchorPane fx:id="adminSecondAnchorPane" prefHeight="678.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.DashboardController">
    <children>
-      <VBox layoutY="64.0" prefHeight="542.0" prefWidth="178.0" spacing="20.0" style="-fx-background-color: #1e3799;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="64.0">
+      <VBox layoutX="-32.0" layoutY="64.0" prefHeight="616.0" prefWidth="178.0" spacing="20.0" style="-fx-background-color: #1e3799;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="64.0">
          <children>
             <HBox prefHeight="10.0" prefWidth="178.0" spacing="5.0">
                <children>
-                  <Button fx:id="adminDashboardbtn" mnemonicParsing="false" onAction="#adminDashboardbtnOnAction" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Dashboard" textFill="WHITE">
+                  <Button fx:id="dashboardbtn" mnemonicParsing="false" onAction="#dashboardbtnOnAction" prefHeight="31.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -23,7 +23,7 @@
             </HBox>
             <HBox prefHeight="21.0" prefWidth="178.0" spacing="5.0">
                <children>
-                  <Button fx:id="adminInstructorsbtn" mnemonicParsing="false" onAction="#adminInstructorsbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Instructors" textFill="WHITE">
+                  <Button fx:id="instructorsbtn" mnemonicParsing="false" onAction="#instructorsbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Instructors" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -32,7 +32,7 @@
             </HBox>
             <HBox prefHeight="30.0" prefWidth="178.0">
                <children>
-                  <Button fx:id="adminCoursesbtn" mnemonicParsing="false" onAction="#adminCoursesbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Courses" textFill="WHITE">
+                  <Button fx:id="coursesbtn" mnemonicParsing="false" onAction="#coursesbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Courses" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -41,7 +41,7 @@
             </HBox>
             <HBox prefHeight="21.0" prefWidth="178.0" spacing="5.0">
                <children>
-                  <Button fx:id="adminStudentbtn" mnemonicParsing="false" onAction="#adminStudentbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Students" textFill="WHITE">
+                  <Button fx:id="studentbtn" mnemonicParsing="false" onAction="#studentbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Students" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -50,7 +50,7 @@
             </HBox>
             <HBox prefHeight="31.0" prefWidth="178.0">
                <children>
-                  <Button fx:id="adminLessonsbtn" mnemonicParsing="false" onAction="#adminLessonsbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Lessons" textFill="WHITE">
+                  <Button fx:id="lessonsbtn" mnemonicParsing="false" onAction="#lessonsbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Lessons" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -59,16 +59,21 @@
             </HBox>
             <HBox prefHeight="21.0" prefWidth="178.0" spacing="5.0">
                <children>
-                  <Button fx:id="adminPaymentbtn" mnemonicParsing="false" onAction="#adminPaymentbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Payment" textFill="WHITE">
+                  <Button fx:id="paymentbtn" mnemonicParsing="false" onAction="#paymentbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Payment" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
                </children>
             </HBox>
+            <Button fx:id="userbtn" mnemonicParsing="false" onAction="#userbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
             <HBox prefHeight="21.0" prefWidth="178.0" spacing="5.0">
                <children>
-                  <Button fx:id="adminLogOutbtn" alignment="CENTER" mnemonicParsing="false" onAction="#adminLogOutbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="logOutbtn" alignment="CENTER" mnemonicParsing="false" onAction="#logOutbtnOnAction" prefHeight="26.0" prefWidth="178.0" style="-fx-background-color: #1e3799;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -83,7 +88,7 @@
             <Insets top="20.0" />
          </padding>
       </VBox>
-      <HBox prefHeight="66.0" prefWidth="998.0" spacing="520.0" style="-fx-background-color: #4a69bd;">
+      <HBox prefHeight="66.0" prefWidth="1338.0" spacing="850.0" style="-fx-background-color: #4a69bd;">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
@@ -108,6 +113,6 @@
          </padding>
       </HBox>
       <HBox layoutX="295.0" layoutY="116.0" prefHeight="27.0" prefWidth="62.0" />
-      <AnchorPane fx:id="adminMainAnchorPane" layoutX="178.0" layoutY="66.0" prefHeight="614.0" prefWidth="820.0" style="-fx-background-color: #f5f7fb;" />
+      <AnchorPane fx:id="adminMainAnchorPane" layoutX="178.0" layoutY="66.0" prefHeight="614.0" prefWidth="1160.0" style="-fx-background-color: #f5f7fb;" />
    </children>
 </AnchorPane>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="614.0" prefWidth="1160.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.CoursesPageController">
    <children>
@@ -15,255 +15,21 @@
             <Font name="Bookman Old Style Bold" size="35.0" />
          </font>
       </Text>
-      <Button layoutX="23.0" layoutY="77.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #2ed573;" text="+ Add Course" textFill="WHITE">
+      <Button fx:id="addCoursebtn" layoutX="23.0" layoutY="77.0" mnemonicParsing="false" onAction="#addCoursebtn" prefHeight="38.0" prefWidth="178.0" style="-fx-background-color: #2ed573;" text="+ Add Course" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Pane layoutX="23.0" layoutY="131.0" opacity="0.57" prefHeight="199.0" prefWidth="344.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 15;">
-         <children>
-            <Pane />
-            <Text fill="#050f07" layoutX="246.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LKR 50,000">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <Text fill="#1947ff" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Learner Programe">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C1001" />
-            <VBox layoutX="14.0" layoutY="65.0" prefHeight="62.0" prefWidth="68.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enrolled :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instructors :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Learn basic driving skills and traffic rules">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffaf40;" text="Edit" />
-            <Button layoutX="180.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffb8b8;" text="Delete" textFill="RED" />
-            <VBox layoutX="90.0" layoutY="65.0" prefHeight="66.0" prefWidth="232.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12 Weeks" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="402.0" layoutY="131.0" opacity="0.57" prefHeight="199.0" prefWidth="344.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 15;">
-         <children>
-            <Pane />
-            <Text fill="#050f07" layoutX="246.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LKR 65,000">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <Text fill="#1947ff" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Advanced Defensive Driving">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C1002" />
-            <VBox layoutX="14.0" layoutY="65.0" prefHeight="97.0" prefWidth="68.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enrolled :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instructors :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Master safe and defensive driving techniques.">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffaf40;" text="Edit" />
-            <Button layoutX="180.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffb8b8;" text="Delete" textFill="RED" />
-            <VBox layoutX="90.0" layoutY="65.0" prefHeight="66.0" prefWidth="232.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8 Weeks" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="782.0" layoutY="131.0" opacity="0.57" prefHeight="199.0" prefWidth="344.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 15;">
-         <children>
-            <Pane />
-            <Text fill="#050f07" layoutX="246.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LKR 75,000">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <Text fill="#1947ff" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motorcycle License Training">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C1003" />
-            <VBox layoutX="14.0" layoutY="65.0" prefHeight="97.0" prefWidth="68.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enrolled :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instructors :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Train for safe motorcycle riding and license prep.">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffaf40;" text="Edit" />
-            <Button layoutX="180.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffb8b8;" text="Delete" textFill="RED" />
-            <VBox layoutX="90.0" layoutY="65.0" prefHeight="66.0" prefWidth="232.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="16 Weeks" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="23.0" layoutY="351.0" opacity="0.57" prefHeight="199.0" prefWidth="344.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 15;">
-         <children>
-            <Pane />
-            <Text fill="#050f07" layoutX="246.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LKR 150,000">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <Text fill="#1947ff" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heavy Vehicle Training">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C1004" />
-            <VBox layoutX="14.0" layoutY="65.0" prefHeight="97.0" prefWidth="68.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enrolled :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instructors :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Learn to drive trucks and buses safely.">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffaf40;" text="Edit" />
-            <Button layoutX="180.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffb8b8;" text="Delete" textFill="RED" />
-            <VBox layoutX="90.0" layoutY="65.0" prefHeight="66.0" prefWidth="232.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6 Months" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
-      <Pane layoutX="402.0" layoutY="351.0" opacity="0.57" prefHeight="199.0" prefWidth="344.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 15;">
-         <children>
-            <Pane />
-            <Text fill="#050f07" layoutX="246.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LKR 30,000">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
-            <Text fill="#1947ff" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Refresher Driving Course">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Text>
-            <Text layoutX="14.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C1005" />
-            <VBox layoutX="14.0" layoutY="65.0" prefHeight="97.0" prefWidth="68.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Duration :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enrolled :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Instructors :">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Improve skills and update traffic knowledge.">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <Button layoutX="14.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffaf40;" text="Edit" />
-            <Button layoutX="180.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="146.0" style="-fx-background-color: #ffb8b8;" text="Delete" textFill="RED" />
-            <VBox layoutX="90.0" layoutY="65.0" prefHeight="66.0" prefWidth="232.0" spacing="6.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3 Months" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" />
-               </children>
-            </VBox>
-         </children>
-      </Pane>
+      <TableView fx:id="coursetbl" layoutX="23.0" layoutY="130.0" prefHeight="419.0" prefWidth="1102.0" style="-fx-background-radius: 10;">
+        <columns>
+          <TableColumn fx:id="colCourseId" prefWidth="118.40002059936523" text="Course ID" />
+          <TableColumn fx:id="colCourseName" prefWidth="271.99998474121094" text="Course Name" />
+            <TableColumn fx:id="colDuration" prefWidth="165.60003662109375" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="127.20001220703125" text="Fee" />
+            <TableColumn fx:id="colDescription" prefWidth="279.20001220703125" text="Description" />
+            <TableColumn fx:id="colAction" prefWidth="136.00003662109384" text="Action" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchtxt" layoutX="821.0" layoutY="77.0" prefHeight="38.0" prefWidth="304.0" promptText="Search here... (EX- ID,Name)" style="-fx-background-color: #dfe4ea; -fx-background-radius: 10;" />
    </children>
 </AnchorPane>
