@@ -29,7 +29,7 @@ public class Payments {
     private LocalDate payment_Date;
 
     @Column(nullable = false)
-    private int payment_Amount;
+    private double payment_Amount;
 
     @Column(nullable = false)
     private String payment_status;

@@ -2,12 +2,15 @@ package lk.ijse.elitedrivingschoolproject.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import lk.ijse.elitedrivingschoolproject.dto.InstructorDTO;
+import lk.ijse.elitedrivingschoolproject.dto.PaymentDTO;
 
-public class ProcessPaymentPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ProcessPaymentPageController implements Initializable {
 
     @FXML
     private TextField amounttxt;
@@ -16,13 +19,13 @@ public class ProcessPaymentPageController {
     private Button completeProcessPaymentbtn;
 
     @FXML
-    private ComboBox<?> coursecmb;
+    private ComboBox<String> coursecmb;
 
     @FXML
-    private ComboBox<?> paymentMethodcmb;
+    private DatePicker datepicker;
 
     @FXML
-    private ComboBox<?> studentcmb;
+    private ComboBox<String> studentcmb;
 
     @FXML
     private Label transactionIdlbl;
@@ -32,4 +35,23 @@ public class ProcessPaymentPageController {
 
     }
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
+    public void loadData(PaymentDTO paymentDTO) throws Exception {
+
+        transactionIdlbl.setText(paymentDTO.getTransactionId());
+        studentcmb.setValue(paymentDTO.getStudentId());
+        coursecmb.setValue(paymentDTO.getCourseId());
+        datepicker.setValue(paymentDTO.getPaymentDate());
+       // amounttxt.setText(paymentDTO.getPaymentAmount());
+
+
+
+
+    }
+
+    // update button
 }

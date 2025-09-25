@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="608.0" prefWidth="600.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.ProcessPaymentPageController">
    <children>
@@ -49,12 +49,12 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="498.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Method">
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
                            <font>
                               <Font name="System Bold" size="16.0" />
                            </font>
                         </Text>
-                        <ComboBox fx:id="paymentMethodcmb" prefHeight="40.0" prefWidth="502.0" promptText="Select Payment Method" style="-fx-background-color: #dfe4ea;" />
+                        <DatePicker fx:id="datepicker" prefHeight="34.0" prefWidth="513.0" promptText="select Date" style="-fx-background-color: #dfe4ea;" />
                      </children>
                   </VBox>
                </children>

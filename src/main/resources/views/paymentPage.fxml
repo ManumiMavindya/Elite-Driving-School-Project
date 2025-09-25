@@ -11,7 +11,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="614.0" prefWidth="1160.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.PaymentPageController">
    <children>
       <Text layoutX="23.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Management">
@@ -27,8 +26,8 @@
       <TableView fx:id="paymenttbl" layoutX="23.0" layoutY="313.0" prefHeight="270.0" prefWidth="1109.0" style="-fx-background-radius: 10;">
         <columns>
           <TableColumn fx:id="colTransactionId" prefWidth="131.20000839233398" text="Transaction ID" />
-          <TableColumn fx:id="colStudentName" prefWidth="244.7999725341797" text="Student Name" />
-            <TableColumn fx:id="colCourse" prefWidth="227.20001220703125" text="Course" />
+          <TableColumn fx:id="colStudentId" prefWidth="244.7999725341797" text="Student ID" />
+            <TableColumn fx:id="colCourseId" prefWidth="227.20001220703125" text="Course ID" />
             <TableColumn fx:id="colDate" prefWidth="132.0" text="Date" />
             <TableColumn fx:id="colAmount" prefWidth="129.5999755859375" text="Amount" />
             <TableColumn fx:id="colStatus" prefWidth="125.5999755859375" text="Status" />

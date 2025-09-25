@@ -1,6 +1,7 @@
 package lk.ijse.elitedrivingschoolproject.dto.tm;
 
 import javafx.scene.control.Button;
+import javafx.scene.layout.Pane;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,8 +17,7 @@ public class PaymentTM {
     private String studentId;
     private String courseId;
     private LocalDate paymentDate;
-    private int paymentAmount;
+    private double paymentAmount;
     private String paymentStatus;
-    private Button updateButton;
-    private Button deleteButton;
+    private Pane action;
 }

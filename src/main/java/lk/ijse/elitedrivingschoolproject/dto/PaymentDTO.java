@@ -16,6 +16,6 @@ public class PaymentDTO {
     private String studentId;
     private String courseId;
     private LocalDate paymentDate;
-    private int paymentAmount;
+    private double paymentAmount;
     private String paymentStatus;
 }
