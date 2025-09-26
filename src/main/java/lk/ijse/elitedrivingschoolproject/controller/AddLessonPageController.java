@@ -44,6 +44,9 @@ public class AddLessonPageController implements Initializable {
     @FXML
     private ComboBox<String> studentcmb;
 
+    @FXML
+    private Button updateLessonbtn;
+
      LessonsBO lessonsBO = (LessonsBO) BOFactory.getInstance().getBO(BOTypes.LESSONS) ;
 
     @FXML
@@ -109,6 +112,44 @@ public class AddLessonPageController implements Initializable {
 
     }
 
-    //create update button
 
+    public void updateLessonbtnOnAction(ActionEvent actionEvent) {
+
+        String studentId = startcmb.getValue().toString();
+        String courseId = coursecmb.getValue().toString();
+        String instructorId = instructorcmb.getValue().toString();
+        LocalDate date = LocalDate.parse(lessonDatepicker.getValue().toString());
+        Time start = startcmb.getValue();
+        Time end = endcmb.getValue();
+        String status = statuscmb.getValue().toString();
+
+        if (studentId == null || courseId == null || instructorId == null || date == null || start == null || end == null || status == null) {
+            updateLessonbtn.setDisable(true);
+            new Alert(Alert.AlertType.ERROR, "Please fill all the fields", ButtonType.OK).show();
+            return;
+        }
+
+        try {
+            boolean isUpdated = lessonsBO.updateLesson(LessonsDTO.builder()
+                    .lessonId(lessonIdlbl.getText())
+                    .studentId(studentId)
+                    .courseId(courseId)
+                    .instructorId(instructorId)
+                    .lessonDate(date)
+                    .startTime(start)
+                    .endTime(end)
+                    .status(status)
+                    .build());
+
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION, "Lesson updated successfully!!", ButtonType.OK).show();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Lesson not update successfully!!", ButtonType.OK).show();
+            }
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
 }
