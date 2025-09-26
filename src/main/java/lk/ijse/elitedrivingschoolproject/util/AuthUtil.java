@@ -1,5 +1,6 @@
 package lk.ijse.elitedrivingschoolproject.util;
 
+import lk.ijse.elitedrivingschoolproject.dto.UserDTO;
 import lk.ijse.elitedrivingschoolproject.entity.User;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,14 +10,14 @@ public class AuthUtil {
     @Getter
     @Setter
 
-    private static User user;
+    private static UserDTO currentUser;
 
     public static String getRole(){
-        return user != null ? user.getRole() : null;
+        return currentUser != null ? currentUser.getRole() : null;
     }
 
     private static void clear(){
-        user = null;
+        currentUser = null;
     }
 
 
