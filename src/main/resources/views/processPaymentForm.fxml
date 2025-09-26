@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="608.0" prefWidth="600.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.ProcessPaymentPageController">
+<AnchorPane prefHeight="616.0" prefWidth="600.0" style="-fx-background-color: #f5f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.elitedrivingschoolproject.controller.ProcessPaymentPageController">
    <children>
-      <Pane layoutX="29.0" layoutY="25.0" prefHeight="559.0" prefWidth="542.0" style="-fx-background-color: white; -fx-background-radius: 15;">
+      <Pane layoutX="29.0" layoutY="25.0" prefHeight="473.0" prefWidth="542.0" style="-fx-background-color: white; -fx-background-radius: 15;">
          <children>
             <VBox layoutX="22.0" layoutY="80.0" prefHeight="388.0" prefWidth="498.0">
                <children>
@@ -74,12 +74,17 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Button fx:id="completeProcessPaymentbtn" layoutX="22.0" layoutY="485.0" mnemonicParsing="false" onAction="#completeProcessPaymentbtnOnAction" prefHeight="40.0" prefWidth="498.0" style="-fx-background-radius: 10; -fx-background-color: blue;" text="Process Payment" textFill="WHITE">
+            <Button fx:id="completeProcessPaymentbtn" layoutX="22.0" layoutY="485.0" mnemonicParsing="false" onAction="#completeProcessPaymentbtnOnAction" prefHeight="40.0" prefWidth="498.0" style="-fx-background-radius: 10; -fx-background-color: #2ed573;" text="Process Payment" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
             <Label fx:id="transactionIdlbl" layoutX="176.0" layoutY="23.0" />
+            <Button fx:id="updatePaymentbtn" layoutX="22.0" layoutY="536.0" mnemonicParsing="false" onAction="#updatePaymentbtnOnAction" prefHeight="40.0" prefWidth="498.0" style="-fx-background-radius: 10; -fx-background-color: blue;" text="Update Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>
