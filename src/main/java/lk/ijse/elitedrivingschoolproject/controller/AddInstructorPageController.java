@@ -45,6 +45,10 @@ public class AddInstructorPageController implements Initializable {
     @FXML
     private ComboBox<String> instructorStatusCombo;
 
+    @FXML
+    private Button updateInstructorbtn;
+
+
     InstructorBO instructorBO = (InstructorBO) BOFactory.getInstance().getBO(BOTypes.INSTRUCTOR) ;
 
     private final String emailRegex = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\n";
@@ -137,6 +141,67 @@ public class AddInstructorPageController implements Initializable {
         instructorStatusCombo.setValue(instructorDTO.getStatus());
     }
 
-    //update button
+    public void updateInstructorbtnOnAction(ActionEvent actionEvent) {
+
+        String fullName = instructorFullNametxt.getText();
+        LocalDate dob =  InstructorBirthtxt.getValue();
+        String phone  = instructorPhoneNumbertxt.getText();
+        String address = instructorAddresstxt.getText();
+        String email = instructorEmailAddresstxt.getText();
+        String licence  = instructorLicenceNumbertxt.getText();
+        String courseId = instructorStatusCombo.getValue();
+        String status = instructorStatusCombo.getValue();
+
+        boolean isValidEmail = email.matches(emailRegex);
+        boolean isValidPhone = phone.matches(phoneRegex);
+        boolean isValidLicenceNumber = address.matches(licenceNumberRegex);
+
+        instructorEmailAddresstxt.setStyle(instructorEmailAddresstxt.getStyle() +";-fx-border-color: red");
+        instructorPhoneNumbertxt.setStyle(instructorPhoneNumbertxt.getStyle() +";-fx-border-color: red");
+        instructorLicenceNumbertxt.setStyle(instructorLicenceNumbertxt.getStyle() +";-fx-border-color: red");
+
+        if (fullName.isEmpty() || dob == null || phone.isEmpty() || address.isEmpty() || email.isEmpty() || licence.isEmpty() || courseId.isEmpty() || status.isEmpty()) {
+            updateInstructorbtn.setDisable(true);
+            new Alert(Alert.AlertType.ERROR, "Please fill all the fields", ButtonType.OK).show();
+            return;
+        }
+        if (!isValidEmail) {
+            instructorEmailAddresstxt.setStyle(instructorEmailAddresstxt.getStyle() +";-fx-border-color: red");
+            new Alert(Alert.AlertType.ERROR, "Invalid email format ", ButtonType.OK).show();
+            return;
+        }
+        if (!isValidPhone) {
+            instructorPhoneNumbertxt.setStyle(instructorPhoneNumbertxt.getStyle() +";-fx-border-color: red");
+            new Alert(Alert.AlertType.ERROR, "Invalid phone number format ", ButtonType.OK).show();
+            return;
+        }
+        if (!isValidLicenceNumber) {
+            instructorLicenceNumbertxt.setStyle(instructorLicenceNumbertxt.getStyle() +";-fx-border-color: red");
+            new Alert(Alert.AlertType.ERROR, "Invalid licence number format", ButtonType.OK).show();
+            return;
+        }
+        try {
+            boolean isUpdated = instructorBO.updateInstructor(InstructorDTO.builder()
+                    .instructorId(instructorIdlbl.getText())
+                    .instructorFullName(fullName)
+                    .instructorBirthDate(dob)
+                    .instructorPhone(phone)
+                    .instructorAddress(address)
+                    .instructorEmail(email)
+                    .instructorLicenceNumber(licence)
+                    .courseId(courseId)
+                    .status(status)
+                    .build());
+
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION, "Instructor updated successfully!!", ButtonType.OK).show();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Instructor could not be update!!", ButtonType.OK).show();
+            }
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
