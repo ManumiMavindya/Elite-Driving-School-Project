@@ -38,6 +38,9 @@ public class ProcessPaymentPageController implements Initializable {
     @FXML
     private ComboBox<String> statuscmb;
 
+    @FXML
+    private Button updatePaymentbtn;
+
     PaymentBO paymentBO = (PaymentBO) BOFactory.getInstance().getBO(BOTypes.PAYMENTS) ;
 
     @FXML
@@ -97,5 +100,38 @@ public class ProcessPaymentPageController implements Initializable {
 
     }
 
-    // update button
+    public void updatePaymentbtnOnAction(ActionEvent actionEvent) {
+
+        String studentId = studentcmb.getValue();
+        String courseId = coursecmb.getValue();
+        LocalDate date = datepicker.getValue();
+        Double amount = Double.parseDouble(amounttxt.getText());
+        String status = statuscmb.getValue();
+
+        if (studentId != null || courseId != null || date != null || amount != null || status != null) {
+            updatePaymentbtn.setDisable(true);
+            new Alert(Alert.AlertType.ERROR,"pleas enter all the fields",ButtonType.OK).show();
+            return;
+        }
+
+        try {
+            boolean isUpdated = paymentBO.updatePayment(PaymentDTO.builder()
+                    .transactionId(transactionIdlbl.getText())
+                    .studentId(studentId)
+                    .courseId(courseId)
+                    .paymentDate(date)
+                    .paymentAmount(amount)
+                    .paymentStatus(status)
+                    .build());
+
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION,"Payment updated successfully").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Payment not updated successfully").show();
+            }
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
