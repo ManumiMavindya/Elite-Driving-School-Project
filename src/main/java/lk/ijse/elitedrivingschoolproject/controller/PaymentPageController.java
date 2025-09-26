@@ -49,14 +49,10 @@ public class PaymentPageController implements Initializable {
     @FXML
     private TableColumn<PaymentTM, String> colTransactionId;
 
-    @FXML
-    private Label completePaymentsCountlbl;
 
     @FXML
-    private TableView<?> paymenttbl;
+    private TableView<PaymentTM> paymenttbl;
 
-    @FXML
-    private Label pendingPaymentsCountlbl;
 
     @FXML
     private Button processPaymentbtn;
@@ -105,7 +101,7 @@ public class PaymentPageController implements Initializable {
     private void loadAllPayments() {
 
         try {
-            colTransactionId.setItems(FXCollections.observableArrayList(
+            paymenttbl.setItems(FXCollections.observableArrayList(
                     paymentBO.getAllPayments().stream().map(paymentDTO -> {
 
                         Pane action = new Pane();
@@ -188,6 +184,8 @@ public class PaymentPageController implements Initializable {
 
         } catch (IOException e) {
             new Alert(Alert.AlertType.ERROR, "Failed to open!").show();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
     }
 }
