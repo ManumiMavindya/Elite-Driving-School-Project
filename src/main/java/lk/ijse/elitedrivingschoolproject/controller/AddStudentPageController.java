@@ -60,6 +60,9 @@ public class AddStudentPageController implements Initializable {
     private TextField studentPhoneNumbertxt;
 
     @FXML
+    private Button updateStudentbtn;
+
+    @FXML
     void studentAddFormbtnOnAction(ActionEvent event) {
 
     }
@@ -71,7 +74,10 @@ public class AddStudentPageController implements Initializable {
 
     public void loadData(StudentDTO studentDTO) {}
 
+    public void updateStudentbtnOnAction(ActionEvent actionEvent) {
+    }
 
-    //update button
+
+
 
 }
