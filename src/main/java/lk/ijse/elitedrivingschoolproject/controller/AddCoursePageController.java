@@ -35,6 +35,9 @@ public class AddCoursePageController implements Initializable {
     @FXML
     private Label courselbl;
 
+    @FXML
+    private Button updateCoursebtn;
+
     CourseBO courseBO = (CourseBO) BOFactory.getInstance().getBO(BOTypes.COURSE) ;
 
     @FXML
@@ -91,7 +94,40 @@ public class AddCoursePageController implements Initializable {
 
     }
 
-    // update button
+    public void updateCoursebtnOnAction(ActionEvent actionEvent) {
+
+        String name = courseNametxt.getText();
+        String duration = courseDurationtxt.getText();
+        Double fee = Double.valueOf(CourseFeetxt.getText());
+        String description = Descriptiontxt.getText();
+
+        if (name.isEmpty() || duration.isEmpty() || description.isEmpty() || fee.isNaN() || fee.isInfinite()) {
+            updateCoursebtn.setDisable(true);
+            new Alert(Alert.AlertType.ERROR, "Please fill all the required fields!").show();
+            return;
+        }
+
+        try {
+            boolean isUpdated = courseBO.updateCourse(CourseDTO.builder()
+                    .courseId(courselbl.getText())
+                    .courseName(String.valueOf(courseNametxt))
+                    .duration(duration)
+                    .fee(fee)
+                    .description(description)
+                    .build());
+
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION, "Course updated successfully!").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "Course could not be update!").show();
+            }
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+
 
 }
 
