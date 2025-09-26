@@ -41,6 +41,9 @@ public class AddUserPageController implements Initializable {
     @FXML
     private ComboBox<UserTM> rolecmb;
 
+    @FXML
+    private Button updateUserbtn;
+
     private final UserBO userBO = (UserBO) BOFactory.getInstance().getBO(BOTypes.USER);
 
     private final String passwordRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$";
@@ -127,6 +130,59 @@ public class AddUserPageController implements Initializable {
         userContacttxt.setText(userDTO.getContactNumber());
     }
 
-    //update button
+    public void updateUserbtnOnAction(ActionEvent actionEvent) {
+
+        try {
+            String userId = userIdlbl.getText();
+            String userName = userNametxt.getText();
+            int age = Integer.parseInt(userAgetxt.getText());
+            String email = userEmailtxt.getText();
+            String password = userPasswordtxt.getText();
+            String contactNumber = userContacttxt.getText();
+            String role = rolecmb.getSelectionModel().getSelectedItem().toString();
+
+            if (!password.matches(passwordRegex)) {
+                updateUserbtn.setDisable(true);
+                new Alert(Alert.AlertType.ERROR, "Password is incorrect").show();
+                return;
+            }
+            if (!contactNumber.matches(contactNumberRegex)) {
+                updateUserbtn.setDisable(true);
+                new Alert(Alert.AlertType.ERROR, "Contact number is incorrect").show();
+                return;
+            }
+            if (!email.matches(emailRegex)) {
+                updateUserbtn.setDisable(true);
+                new Alert(Alert.AlertType.ERROR, "Email is incorrect").show();
+                return;
+            }
+
+            if (!isValidAge) {
+                updateUserbtn.setDisable(true);
+                new Alert(Alert.AlertType.ERROR, "Age is incorrect").show();
+                return;
+            }
+
+            String encryptedPassword = PasswordUtils.hashPassword(password);
+
+            boolean isUpdated = userBO.updateUser(new UserDTO(
+                    userId,
+                    userName,
+                    age,
+                    email,
+                    password,
+                    contactNumber,
+                    role
+            ));
+            if (isUpdated) {
+                new Alert(Alert.AlertType.INFORMATION, "User updated successfully").show();
+            }else {
+                new Alert(Alert.AlertType.ERROR, "User could not be update").show();
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
+    }
+
 }
 
