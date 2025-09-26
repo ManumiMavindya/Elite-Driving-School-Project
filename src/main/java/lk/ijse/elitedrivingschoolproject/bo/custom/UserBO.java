@@ -24,5 +24,8 @@ public interface UserBO extends SuperBO {
 
     String generateNewUserID() throws Exception;
 
+    public UserDTO getUserByEmail(String email) ;
+
+
 
 }

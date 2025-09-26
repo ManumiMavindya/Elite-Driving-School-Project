@@ -91,4 +91,11 @@ public class UserBOImpl implements UserBO {
         return userDAO.generateNewId();
     }
 
+    @Override
+    public UserDTO getUserByEmail(String email) {
+
+        User user = userDAO.getUserByEmail(email);
+        return entityDTOConverter.getUserDTO(user);
+    }
+
 }
