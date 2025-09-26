@@ -14,7 +14,7 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/views/dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AppInitializer.class.getResource("/views/loginPage.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         primaryStage.setScene(scene);
         primaryStage.setTitle("ELITE DRIVING SCHOOL");

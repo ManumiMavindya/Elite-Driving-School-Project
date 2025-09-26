@@ -15,7 +15,7 @@ import lombok.*;
 public class StudentCourseDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private String studentCourseId;
 
